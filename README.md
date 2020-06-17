@@ -27,7 +27,7 @@ Create a _current total player score_ display that shows the sum of that players
   Output: _total player score_ = 22
 
 Implement functionality so if a user rolls a 1 their turn automatically ends and their _total turn score score_ is reduced to 0
-  Input: Click _roll_ = 1 _turn ends_
+  Input: Click _roll_ = 1, _turn ends_
   Output total score = 8, _total player score_ = Unchanged
 
 Create a button that our user clicks to hault there turn and keep their current score
