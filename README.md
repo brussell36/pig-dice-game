@@ -10,11 +10,11 @@ _This Application will allow a user to play a Dice game against a computer oppon
 
 ## Specifications
 
-1. Create a button that our user can push to roll a virtual dice that returns a number from 1 through 6
+Create a button that our user can push to roll a virtual dice that returns a number from 1 through 6
   Input: Click _roll_
   Output: roll: 3
 
-Create a _current score_ display that shows the user's dice roll totals
+Create a _current total turn score_ display that shows the user's dice roll totals for that turn
   Input: Click _roll_ #1
   Output: roll: 3
   Total: 3
@@ -22,12 +22,15 @@ Create a _current score_ display that shows the user's dice roll totals
   Output: roll: 5
   Total: 8
 
-Implement functionality so if a user rolls a 1 their turn automatically ends
-  Input: Click _roll_ = 1
-  Output total score = -- _turn ends_
+Create a _current total player score_ display that shows the sum of that players individual turn scores
+  Input: _total Player score_ = 14, _total turn score_ = 8, Click _hault_
+  Output: _total player score_ = 22
 
+Implement functionality so if a user rolls a 1 their turn automatically ends and their _total turn score score_ is reduced to 0
+  Input: Click _roll_ = 1 _turn ends_
+  Output total score = 8, _total player score_ = Unchanged
 
-Create a button that our user click to hault there turn and keep their current score
+Create a button that our user clicks to hault there turn and keep their current score
   Input: Click _hault_
   Output: total score = 22
 
@@ -40,6 +43,13 @@ Implement functionality so that multiple user's can play against one another and
 
   Input: Player #3 _roll_
   Output: total score = 19
+
+When one user either rolls a 1 or clicks the _hault_ button the turn is then cycled to the next sequential player.
+  Input: Player #1 _roll_ = 1
+  Output: Player #2 begins turn
+
+  Input: Player #2 clicks _hault_
+  Output: player #3 begins turn
 
 Implement functionality to stop the game once one player reaches a total score of 100
   Input: Player #1 _roll_
