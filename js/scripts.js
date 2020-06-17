@@ -13,12 +13,25 @@ User.prototype.addToTotalScore = function(totalScore) {
   return this.totalScore += turnScoreSum
 }
 
+function addDiceRollValues(diceRollValue, diceRollValue){
+  return diceRollValue + diceRollValue
+}
+
 let diceRollValue = rollDice();
+
 // User Interface
 $(document).ready(function() {
+    let turnScoreArray = [];
   $("#roll-btn").click(function() {
     let diceRollValue = rollDice();
     $(".roll-number").text(diceRollValue);
+    let turnScoreSum = turnScoreArray.push(diceRollValue);
+    turnScoreArray.forEach(function(element) {
+    turnScoreSum += element - 1;
+    $(".turn-number").text("**" + turnScoreSum + "**");
+    });
+    console.log(turnScoreArray);
+    console.log(turnScoreSum);
   });
   $("form#name").submit(function(event){
     event.preventDefault();
@@ -26,12 +39,3 @@ $(document).ready(function() {
     $(".name").text(newUserName);
   });
 });
-
-let turnScoreArray = [];
-let turnScoreSum = 0;
-turnScoreArray.push(diceRollValue);
-  turnScoreArray.forEach(function(element) {
-  turnScoreSum += element;
-  });
-  console.log(turnScoreArray);
-  console.log(turnScoreSum);

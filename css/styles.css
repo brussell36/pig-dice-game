@@ -3,8 +3,12 @@
 }
 
 body {
-  font-family: 'Metal Mania', cursive;
+  font-family: 'Orbitron', sans-serif;
   font-size: 2em;
+  background-image: url(https://wallpaperaccess.com/full/1164421.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: white;
 }
 
 h1  {
