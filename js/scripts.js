@@ -2,9 +2,10 @@
 function rollDice() {
   return 1 + Math.floor(Math.random() * 6);
 } 
-  
-function User(userName, totalScore){
+
+function User(userName, turnScore, totalScore){
   this.userName = userName,
+  this.turnScore = turnScore,
   this.totalScore = totalScore
 }
 let totalScore = 0;
@@ -28,7 +29,7 @@ $(document).ready(function() {
     let turnScoreSum = turnScoreArray.push(diceRollValue);
     turnScoreArray.forEach(function(element) {
     turnScoreSum += element - 1;
-    $(".turn-number").text("**" + turnScoreSum + "**");
+    $(".turn-number").text(turnScoreSum);
     });
     console.log(turnScoreArray);
     console.log(turnScoreSum);
@@ -37,5 +38,8 @@ $(document).ready(function() {
     event.preventDefault();
     let newUserName = $("#user-name").val();
     $(".name").text(newUserName);
-  });
+    $("#user-name").val("");
+    let user1 = new User(newUserName, turnScoreSum);
+    console.log(user1);
+  }); 
 });
