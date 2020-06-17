@@ -10,7 +10,7 @@ _This Application will allow a user to play a Dice game against a computer oppon
 
 ## Specifications
 
-Create a button that our user can push to roll a virtual dice that returns a number from 1 through 6 and displays that number to the user.
+Create a button that our user can push to roll a virtual die that returns a number from 1 through 6 and displays that number to the user.
   Input: Click _roll_
   Output: roll: 3
 
