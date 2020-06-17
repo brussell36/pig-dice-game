@@ -2,23 +2,40 @@
 function rollDice() {
   return 1 + Math.floor(Math.random() * 6);
 }
-
+console.log(rollDice());
+// function TurnScore(diceRollValue){
+  //   return 
+  // }
+  
+  
 function User(userName, totalScore){
   this.userName = userName,
-  this.totalScore = []
+  this.totalScore = totalScore
+}
+let totalScore = 0;
+
+User.prototype.addToTotalScore = function(totalScore) {
+  return this.totalScore += turnScoreSum
 }
 
-User.prototype.addToTurnScore = function(totalScore) {
-  return this.totalScore += turnScore
-}
 
 // User Interface
-
-$(document).ready(function(){
-  let diceRollValue = rollDice();
-  $(".roll-number").text(diceRollValue);
-  $("form#dice-roll").submit(function(event) {
+let diceRollValue = rollDice();
+$(document).ready(function() {
+  $("#name-btn").submit(function(event) {
     event.preventDefault();
-    const inputtedUserName = $("form#player-names");
+    let newUserName = $("#user-name").val();
+    $(".name").text(newUserName);
+  });
+  $("#roll-btn").click(function() {
+    $(".roll-number").text(diceRollValue);
+    $(".roll-number").val("")
   });
 });
+
+let turnScoreArray = [];
+let turnScoreSum = 0;
+turnScoreArray.push(diceRollValue);
+  turnScoreArray.forEach(function(element) {
+  turnScoreSum += element;
+  });
