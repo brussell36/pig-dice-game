@@ -62,7 +62,7 @@ Implement functionality to stop the game once one player reaches a total score o
   Output: total score = 100 - _Stop Game_
 
 Create a display for the winning player
- Input: player #1 _total player score_ = 100
+ Input: player #1 _total player score_ >= 100
  Output: "Player #1 is the bestas and is better than the restas"
 
 
